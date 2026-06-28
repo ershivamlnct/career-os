@@ -1,11 +1,69 @@
-% resume/common/fonts.tex
-% Font setup. Prefer XeLaTeX/LuaLaTeX for system fonts.
-\providecommand{\resumefont}{\sffamily}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume OS
+% File    : fonts.tex
+% Purpose : Typography Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% If xelatex/lualatex is used, users can customize fonts by editing this file.
-\IfFileExists{fontspec.sty}{%
-  \usepackage{fontspec}
-  % Example: \setmainfont{Inter}
-}{%
-  % Fallback for pdfLaTeX already handled by fontenc/inputenc above
+% =============================================================================
+% Font Family
+% =============================================================================
+
+% Modern Helvetica-compatible font
+\RequirePackage{tgheros}
+
+% Use sans-serif as the default family
+\renewcommand{\familydefault}{\sfdefault}
+
+% =============================================================================
+% Micro Typography
+% =============================================================================
+
+\linespread{1.04}
+
+% =============================================================================
+% Font Sizes
+% =============================================================================
+
+% Candidate Name
+\newcommand{\NameFont}{\fontsize{24}{28}\selectfont}
+
+% Professional Headline
+\newcommand{\HeadlineFont}{\fontsize{11}{13}\selectfont}
+
+% Section Heading
+\newcommand{\SectionFont}{\fontsize{13}{15}\bfseries\selectfont}
+
+% Company Name
+\newcommand{\CompanyFont}{\fontsize{11}{13}\bfseries\selectfont}
+
+% Job Title
+\newcommand{\RoleFont}{\fontsize{10.5}{12}\bfseries\selectfont}
+
+% Body Text
+\newcommand{\BodyFont}{\fontsize{10}{12}\selectfont}
+
+% Metadata
+\newcommand{\MetaFont}{\fontsize{9}{11}\selectfont}
+
+% Small Labels
+\newcommand{\SmallFont}{\fontsize{8.5}{10}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Text Styling Helpers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PrimaryText}[1]{%
+    {\color{TextPrimary}#1}
 }
+
+\newcommand{\SecondaryText}[1]{%
+    {\color{TextSecondary}#1}
+}
+
+\newcommand{\MutedText}[1]{%
+    {\color{Muted}#1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of fonts.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
