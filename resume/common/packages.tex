@@ -1,12 +1,116 @@
-% resume/common/packages.tex
-% Common package imports used by resumes. Adjust as needed.
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{microtype}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{parskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume OS - Package Definitions
+% Author : Shivam Chaturvedi
+% Purpose: Centralized package management for Resume OS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% -------------------------------------------------
+% Encoding
+% -------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+
+% -------------------------------------------------
+% Page Layout
+% -------------------------------------------------
+\RequirePackage[
+    top=0.55in,
+    bottom=0.60in,
+    left=0.65in,
+    right=0.65in,
+    footskip=0.30in
+]{geometry}
+
+% -------------------------------------------------
+% Typography
+% -------------------------------------------------
+\RequirePackage{microtype}
+\RequirePackage{setspace}
+\RequirePackage{parskip}
+
+% -------------------------------------------------
+% Tables
+% -------------------------------------------------
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+
+% -------------------------------------------------
+% Lists
+% -------------------------------------------------
+\RequirePackage{enumitem}
+
+\setlist[itemize]{
+    leftmargin=18pt,
+    itemsep=3pt,
+    topsep=4pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% -------------------------------------------------
+% Colors
+% -------------------------------------------------
+\RequirePackage{xcolor}
+
+% -------------------------------------------------
+% Hyperlinks
+% -------------------------------------------------
+\RequirePackage[
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue,
+    pdfauthor={Shivam Chaturvedi},
+    pdftitle={Resume}
+]{hyperref}
+
+% -------------------------------------------------
+% Icons
+% -------------------------------------------------
+\RequirePackage{fontawesome5}
+
+% -------------------------------------------------
+% Section Formatting
+% -------------------------------------------------
+\RequirePackage{titlesec}
+
+% -------------------------------------------------
+% Headers / Footers
+% -------------------------------------------------
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+
+% -------------------------------------------------
+% Graphics
+% -------------------------------------------------
+\RequirePackage{graphicx}
+
+% -------------------------------------------------
+% Conditional Commands
+% -------------------------------------------------
+\RequirePackage{etoolbox}
+
+% -------------------------------------------------
+% Modern Command Definitions
+% -------------------------------------------------
+\RequirePackage{xparse}
+
+% -------------------------------------------------
+% Better Underlines
+% -------------------------------------------------
+\RequirePackage[normalem]{ulem}
+
+% -------------------------------------------------
+% Symbols
+% -------------------------------------------------
+\RequirePackage{amssymb}
+
+% -------------------------------------------------
+% Mathematics (used by spacing utilities)
+% -------------------------------------------------
+\RequirePackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of package imports
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
