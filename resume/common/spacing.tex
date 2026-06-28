@@ -1,4 +1,92 @@
-% resume/common/spacing.tex
-% Adjust spacing settings for the resume
-\setlength{\parskip}{6pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume OS
+% File    : spacing.tex
+% Purpose : Global spacing and layout tokens
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% =============================================================================
+% Page Layout
+% =============================================================================
+
+% No paragraph indentation
 \setlength{\parindent}{0pt}
+
+% Small space between paragraphs
+\setlength{\parskip}{4pt}
+
+% =============================================================================
+% Section Spacing
+% =============================================================================
+
+% Space before each section
+\newcommand{\SectionTopSpace}{12pt}
+
+% Space after section title
+\newcommand{\SectionBottomSpace}{6pt}
+
+% Space between jobs/projects
+\newcommand{\ExperienceSpace}{10pt}
+
+% Space between bullet groups
+\newcommand{\GroupSpace}{5pt}
+
+% =============================================================================
+% Header Spacing
+% =============================================================================
+
+\newcommand{\HeaderBottomSpace}{16pt}
+
+% =============================================================================
+% Skills Spacing
+% =============================================================================
+
+\newcommand{\SkillRowSpace}{4pt}
+
+% =============================================================================
+% Bullet Spacing
+% =============================================================================
+
+\setlist[itemize]{
+    leftmargin=18pt,
+    itemsep=3pt,
+    parsep=0pt,
+    topsep=3pt,
+    partopsep=0pt
+}
+
+% =============================================================================
+% Section Heading Style
+% =============================================================================
+
+\titlespacing*{\section}
+    {0pt}
+    {\SectionTopSpace}
+    {\SectionBottomSpace}
+
+\titlespacing*{\subsection}
+    {0pt}
+    {8pt}
+    {4pt}
+
+% =============================================================================
+% Horizontal Rule
+% =============================================================================
+
+\newcommand{\SectionDivider}{
+    \vspace{2pt}
+    {\color{SectionRule}\rule{\linewidth}{0.5pt}}
+    \vspace{6pt}
+}
+
+% =============================================================================
+% Common Vertical Spaces
+% =============================================================================
+
+\newcommand{\SmallVSpace}{\vspace{4pt}}
+\newcommand{\MediumVSpace}{\vspace{8pt}}
+\newcommand{\LargeVSpace}{\vspace{12pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of spacing.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
