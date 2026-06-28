@@ -1,0 +1,15 @@
+% resume/common/commands.tex
+% Reusable commands for resume sections and entries
+\newcommand{\sectiontitle}[1]{\vspace{6pt}\par\noindent{\Large\bfseries #1}\par\vspace{4pt}}
+
+\newenvironment{rsubsection}[1]{%
+  \par\noindent\textbf{#1}\begin{list}{}{
+    \setlength{\leftmargin}{1em}\setlength{\rightmargin}{0pt}
+    \setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}}\item[]}{\end{list}\vspace{4pt}}
+
+% Simple job entry: \jobentry{role}{company}{dates}{description}
+\newcommand{\jobentry}[4]{%
+  \noindent{\textbf{#1} \hfill {\small #3}}\\
+  \noindent{#2}\\
+  \noindent{#4}\par\vspace{6pt}
+}

@@ -1,0 +1,11 @@
+% resume/common/fonts.tex
+% Font setup. Prefer XeLaTeX/LuaLaTeX for system fonts.
+\providecommand{\resumefont}{\sffamily}
+
+% If xelatex/lualatex is used, users can customize fonts by editing this file.
+\IfFileExists{fontspec.sty}{%
+  \usepackage{fontspec}
+  % Example: \setmainfont{Inter}
+}{%
+  % Fallback for pdfLaTeX already handled by fontenc/inputenc above
+}
