@@ -1,15 +1,223 @@
-% resume/common/commands.tex
-% Reusable commands for resume sections and entries
-\newcommand{\sectiontitle}[1]{\vspace{6pt}\par\noindent{\Large\bfseries #1}\par\vspace{4pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume OS
+% File    : commands.tex
+% Purpose : Reusable UI components for Resume OS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newenvironment{rsubsection}[1]{%
-  \par\noindent\textbf{#1}\begin{list}{}{
-    \setlength{\leftmargin}{1em}\setlength{\rightmargin}{0pt}
-    \setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}}\item[]}{\end{list}\vspace{4pt}}
+% =============================================================================
+% HEADER
+% =============================================================================
 
-% Simple job entry: \jobentry{role}{company}{dates}{description}
-\newcommand{\jobentry}[4]{%
-  \noindent{\textbf{#1} \hfill {\small #3}}\\
-  \noindent{#2}\\
-  \noindent{#4}\par\vspace{6pt}
+\NewDocumentCommand{\ResumeHeader}
+    { m m m m m m }
+{
+    \begin{center}
+
+    {\NameFont\color{Primary}\textbf{#1}}
+
+    \vspace{4pt}
+
+    {\HeadlineFont\color{Secondary}\textbf{#2}}
+
+    \vspace{5pt}
+
+    {\MetaFont
+    \faMapMarker* \hspace{2pt} #3
+    \hspace{12pt}
+    \faEnvelope \hspace{2pt}
+    \href{mailto:#4}{#4}
+    \hspace{12pt}
+    \faPhone \hspace{2pt} #5
+    \hspace{12pt}
+    \faLinkedin \hspace{2pt}
+    \href{https://#6}{#6}
+    }
+
+    \end{center}
+
+    \vspace{\HeaderBottomSpace}
+
+    \SectionDivider
 }
+
+% =============================================================================
+% SECTION
+% =============================================================================
+
+\NewDocumentCommand{\ResumeSection}{m}
+{
+    \section*{
+        \color{SectionTitle}
+        \SectionFont
+        #1
+    }
+
+    \vspace{2pt}
+}
+
+% =============================================================================
+% EXPERIENCE ENTRY
+% =============================================================================
+
+\NewDocumentCommand{\ExperienceEntry}
+    { m m m m }
+{
+    \noindent
+
+    \begin{tabularx}{\linewidth}{Xr}
+
+    {\CompanyFont #1}
+
+    &
+    {\MetaFont\color{Secondary}#4}
+
+    \\
+
+    {\RoleFont\color{Secondary}#2}
+
+    &
+    {\MetaFont #3}
+
+    \\
+
+    \end{tabularx}
+
+    \vspace{4pt}
+}
+
+% =============================================================================
+% PROJECT ENTRY
+% =============================================================================
+
+\NewDocumentCommand{\ProjectEntry}
+    { m m }
+{
+
+{\RoleFont\color{Primary}#1}
+
+\vspace{2pt}
+
+#2
+
+\MediumVSpace
+
+}
+
+% =============================================================================
+% SKILL CATEGORY
+% =============================================================================
+
+\NewDocumentCommand{\SkillCategory}
+    { m m }
+{
+
+\textbf{#1}
+
+\hspace{6pt}
+
+#2
+
+\SmallVSpace
+
+}
+
+% =============================================================================
+% ACHIEVEMENT
+% =============================================================================
+
+\NewDocumentCommand{\Achievement}
+    { m m }
+{
+
+\textbf{#1}
+
+\hspace{5pt}
+
+#2
+
+\SmallVSpace
+
+}
+
+% =============================================================================
+% CERTIFICATION
+% =============================================================================
+
+\NewDocumentCommand{\Certification}
+    { m }
+{
+
+\textbullet
+
+\hspace{4pt}
+
+#1
+
+\SmallVSpace
+
+}
+
+% =============================================================================
+% EDUCATION
+% =============================================================================
+
+\NewDocumentCommand{\Education}
+    { m m m }
+{
+
+\textbf{#1}
+
+\hfill
+
+#3
+
+\\
+
+#2
+
+\MediumVSpace
+
+}
+
+% =============================================================================
+% COMMUNITY
+% =============================================================================
+
+\NewDocumentCommand{\Community}
+    { m m }
+{
+
+\textbf{#1}
+
+\\
+
+#2
+
+\MediumVSpace
+
+}
+
+% =============================================================================
+% BULLET LIST
+% =============================================================================
+
+\newenvironment{ResumeList}
+{
+\begin{itemize}
+}
+{
+\end{itemize}
+}
+
+% =============================================================================
+% BULLET ITEM
+% =============================================================================
+
+\newcommand{\ResumeItem}[1]
+{
+\item #1
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of commands.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
